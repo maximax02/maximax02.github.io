@@ -163,17 +163,41 @@ form button {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    max-height: 95vh;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.950);
 }
 
 /* Modal Content */
+.slides-container {
+    position: relative;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
 .modal-content {
     position: relative;
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
+}
+.mySlides img {
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 16px;
+    padding: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
 }
 
 /* The Close Button */
@@ -315,3 +339,4 @@ form button {
     }
 
 }
+
