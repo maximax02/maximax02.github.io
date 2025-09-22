@@ -67,103 +67,23 @@
         </div>
     </div>
 
-    <!-- The Modal/Lightbox 1 -->
-    <div id="myModal1" class="modal">
-        <span class="close cursor" onclick="closeModal('myModal1')">&times;</span>
+    <!-- Modal/Lightbox DINÁMICO -->
+    <div id="modalDinamico" class="modal">
+        <button class="close cursor" onclick="closeModal()" aria-label="Cerrar galería">&times;</button>
         <div class="modal-content">
-
-            <div class="mySlides1">
-                <div class="numbertext">1 / 4</div>
-                <img src="fotos/estudio_01.jpg" style="width:100%">
+            <!-- Aquí se inyectarán las imágenes dinámicamente -->
+            <div class="slides-container">
+                <!-- Las imágenes aparecerán aquí -->
             </div>
-
-            <div class="mySlides1">
-                <div class="numbertext">2 / 4</div>
-                <img src="fotos/estudio_02.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides1">
-                <div class="numbertext">3 / 4</div>
-                <img src="fotos/estudio_03.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides1">
-                <div class="numbertext">4 / 4</div>
-                <img src="fotos/estudio_04.jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
+    
+            <!-- Controles -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+    
+            <!-- Indicador de slide actual -->
+            <div class="numbertext" id="slideCounter">1 / 1</div>
         </div>
     </div>
-
-    <!-- The Modal/Lightbox 2 -->
-    <div id="myModal2" class="modal">
-        <span class="close cursor" onclick="closeModal('myModal2')">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides2">
-                <div class="numbertext">1 / 4</div>
-                <img src="fotos/boda_01.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides2">
-                <div class="numbertext">2 / 4</div>
-                <img src="fotos/boda_02.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides2">
-                <div class="numbertext">3 / 4</div>
-                <img src="fotos/boda_03.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides2">
-                <div class="numbertext">4 / 4</div>
-                <img src="fotos/boda_04.jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-    </div>
-
-    <!-- The Modal/Lightbox 3 -->
-    <div id="myModal3" class="modal">
-        <span class="close cursor" onclick="closeModal('myModal3')">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides3">
-                <div class="numbertext">1 / 4</div>
-                <img src="fotos/inf_01.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides3">
-                <div class="numbertext">2 / 4</div>
-                <img src="fotos/inf_02.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides3">
-                <div class="numbertext">3 / 4</div>
-                <img src="fotos/inf_03.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides3">
-                <div class="numbertext">4 / 4</div>
-                <img src="fotos/inf_04.jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-    </div>
-
-
 
     <div class="section" id="nosotros">
         <h2>Sobre Nosotros</h2>
@@ -214,6 +134,7 @@
     <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
 
