@@ -292,10 +292,10 @@ form button {
     background: #e8c5ac;
 }
 
-@media (max-width: 950px){
+@media (max-width: 768px){
     .logoImg{
-        width: 50%;
-        height: auto;
+        width: 80%;
+        max-width: 300px;
     }
     .section{
         display: flex;
@@ -321,6 +321,9 @@ form button {
         text-align: center;
         transition: all 0s;
     }
+    nav ul {
+        margin-right: 10px;
+    }
     nav ul li{
         display: block;
         margin: 50px 0;
@@ -337,6 +340,19 @@ form button {
         left: 0;
         transition: all .5s;
     }
+    .nosotros-descripcion,
+    .labelDescripton {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .section {
+        padding: 30px 15px;
+    }
+    h2 {
+        font-size: 24px;
+    }
 
 }
+
 
