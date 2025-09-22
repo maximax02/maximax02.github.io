@@ -1,11 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi primera página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDA Fotografía</title>
+    <meta name="title" content="VIDA Fotografía" />
+    <meta name="description" content="¡Bienvenidos a VIDA Fotografía!" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="robots" content="noimageindex">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vidafotografia.000webhostapp.com/" />
+    <meta property="og:title" content="VIDA Fotografía" />
+    <meta property="og:description" content="¡Bienvenidos a VIDA Fotografía!" />
+    <meta property="og:image" content="logo.jpg" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 </head>
 <body>
-    <h1>¡Hola, amigos!</h1>
-    <p>Esta es mi primera página web 😊</p>
-    <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">VIDA Fotografía</label>
+        <ul>
+            <li><a class="elemento-lista" href="#inicio">Inicio</a></li>
+            <li><a class="elemento-lista" href="#galeria">Galería</a></li>
+            <li><a class="elemento-lista" href="#nosotros">Sobre Nosotros</a></li>
+            <li><a class="elemento-lista" href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="section" id="inicio">
+        <div class="sectionColumnLogo">
+            <img src="fotos/logo_2.jpg" alt="Logo" class="logoImg">
+            <div class="sectionRowLogo">
+                <h2>Capturamos tus momentos más especiales</h2>
+                <p>Sesiones en estudio y exteriores para familias, embarazos, días especiales y más!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="galeria">
+        <h2>Nuestra Galería</h2>
+        <div class="galeryRow">
+            <div class="sectionColumn">
+                <div class="sectionRow">
+                    <label class="labelTitle">Estudio</label>
+                    <img src="fotos/estudio_thumb.jpg" alt="Foto de estudio" onclick="openModal('myModal1', 'mySlides1')">
+                    <label class="labelDescripton">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto cumque enim eveniet pariatur reprehenderit, quisquam perferendis? Mollitia officiis delectus voluptates odit, architecto quasi distinctio fugit perferendis facilis, voluptatibus ab asperiores.</label>
+                </div>
+                <div class="sectionRow">
+                    <label class="labelTitle">Bodas</label>
+                    <img src="fotos/boda_thumb.jpg" alt="Foto familiar en exteriores" onclick="openModal('myModal2', 'mySlides2')">
+                    <label class="labelDescripton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem praesentium animi pariatur quisquam saepe incidunt quidem laborum expedita delectus veritatis a odio deleniti, voluptatem voluptates. Praesentium atque placeat impedit.</label>
+                </div>
+                <div class="sectionRow">
+                    <label class="labelTitle">Infantiles</label>
+                    <img src="fotos/inf_thumb.jpg" alt="Sesión de embarazo" onclick="openModal('myModal3', 'mySlides3')">
+                    <label class="labelDescripton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellendus minima, accusamus ipsam nisi aliquid explicabo temporibus modi incidunt perspiciatis expedita doloremque voluptates consequatur maiores praesentium ipsa reprehenderit possimus similique.</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox 1 -->
+    <div id="myModal1" class="modal">
+        <span class="close cursor" onclick="closeModal('myModal1')">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides1">
+                <div class="numbertext">1 / 4</div>
+                <img src="fotos/estudio_01.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">2 / 4</div>
+                <img src="fotos/estudio_02.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">3 / 4</div>
+                <img src="fotos/estudio_03.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext">4 / 4</div>
+                <img src="fotos/estudio_04.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox 2 -->
+    <div id="myModal2" class="modal">
+        <span class="close cursor" onclick="closeModal('myModal2')">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides2">
+                <div class="numbertext">1 / 4</div>
+                <img src="fotos/boda_01.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">2 / 4</div>
+                <img src="fotos/boda_02.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">3 / 4</div>
+                <img src="fotos/boda_03.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <div class="numbertext">4 / 4</div>
+                <img src="fotos/boda_04.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox 3 -->
+    <div id="myModal3" class="modal">
+        <span class="close cursor" onclick="closeModal('myModal3')">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides3">
+                <div class="numbertext">1 / 4</div>
+                <img src="fotos/inf_01.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">2 / 4</div>
+                <img src="fotos/inf_02.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">3 / 4</div>
+                <img src="fotos/inf_03.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <div class="numbertext">4 / 4</div>
+                <img src="fotos/inf_04.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+
+
+    <div class="section" id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En VIDA Fotografía, nos dedicamos a capturar momentos únicos que perduren para siempre. Especializados en fotografía familiar, de embarazos y temáticas especiales.</p>
+    </div>
+
+    <div class="section" id="inicio">
+        <h2>Sobre Nosotros</h2>
+        <div class="sectionColumnLogo">
+            <img src="fotos/nosotras.jpg" alt="Logo" class="logoImg">
+            <div class="sectionRowLogo">
+                <h2>Capturamos tus momentos más especiales</h2>
+                <p class="nosotros-descripcion">En VIDA Fotografía, nos dedicamos a capturar momentos únicos que perduren para siempre. Especializados en fotografía familiar, de embarazos y temáticas especiales.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="section" id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea rows="5" placeholder="Tu mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    -->
+
+    <div class="section" id="redes_sociales">
+        <h2>Seguinos!</h2>
+        <div class="sectionRowLogo">
+            <div class="redes-row">
+                <img src="icons/insta-logo.png" class="redes-icon">
+                <a href="https://www.instagram.com/vidafotografiia" class="redes-link">@vidafotografiia</a>
+            </div>
+            <div class="redes-row">
+                <img src="icons/wpp-logo.png" class="redes-icon">
+                <a href="wa.me/59891249070" class="redes-link">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VIDA Fotografía. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Seleccionamos el checkbox
+        const checkbox = document.getElementById('check');
+
+        const elementosLista = document.querySelectorAll('.elemento-lista');
+
+        elementosLista.forEach(elemento => {
+            elemento.addEventListener('click', () => {
+                checkbox.checked = false;
+            });
+        });
+    </script>
+
+    <script>
+
+    var currentSlide = "";
+    var slideIndex = 1
+
+    function openModal(myModal, slide) {
+        document.getElementById(myModal).style.display = "block";
+        currentSlide = slide;
+        slideIndex = 1;
+        showSlides(slideIndex);
+    }
+
+    // Close the Modal
+    function closeModal(myModal) {
+        document.getElementById(myModal).style.display = "none";
+    }
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName(currentSlide);
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        console.log("Slides");
+        console.log(slides);
+    }
+    </script>
 </body>
 </html>
