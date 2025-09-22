@@ -1,53 +1,42 @@
-// Cierra menú al hacer clic en un enlace
+// Seleccionamos el checkbox
 const checkbox = document.getElementById('check');
-document.querySelectorAll('.elemento-lista').forEach(link => {
-    link.addEventListener('click', () => checkbox.checked = false);
-});
 
-// Galería mejorada
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.style.display = "block";
-    showSlides(modalId, 1);
+const elementosLista = document.querySelectorAll('.elemento-lista');
+  elementosLista.forEach(elemento => {
+    elemento.addEventListener('click', () => {
+      checkbox.checked = false;
+    });
+  });
+
+var currentSlide = "";
+var slideIndex = 1
+
+function openModal(myModal, slide) {
+    document.getElementById(myModal).style.display = "block";
+    currentSlide = slide;
+    slideIndex = 1;
+    showSlides(slideIndex);
 }
 
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
+// Close the Modal
+function closeModal(myModal) {
+    document.getElementById(myModal).style.display = "none";
 }
 
-function plusSlides(modalId, n) {
-    const modal = document.getElementById(modalId);
-    const slides = modal.querySelectorAll('.mySlides');
-    let index = parseInt(modal.dataset.index || "1") + n;
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-    if (index > slides.length) index = 1;
-    if (index < 1) index = slides.length;
-
-    modal.dataset.index = index;
-    for (let i = 0; i < slides.length; i++) {
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName(currentSlide);
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slides[index - 1].style.display = "block";
+    slides[slideIndex-1].style.display = "block";
+    console.log("Slides");
+    console.log(slides);
 }
-
-function showSlides(modalId, n) {
-    const modal = document.getElementById(modalId);
-    const slides = modal.querySelectorAll('.mySlides');
-    modal.dataset.index = n;
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    if (slides[n - 1]) slides[n - 1].style.display = "block";
-}
-
-// Cierra modal con tecla ESC
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.querySelectorAll('.modal').forEach(modal => {
-            if (modal.style.display === "block") {
-                modal.style.display = "none";
-            }
-        });
-    }
-});
